@@ -1,0 +1,40 @@
+{
+    "name": "tools",
+    "displayName": "Tools",
+    "description": "a useful collection of tools.",
+    "version": "0.0.1",
+    "icon": "icon.png",
+    "publisher": "0z0ne",
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:json.format",
+        "onCommand:json.minify"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [{
+            "command": "json.format",
+            "title": "Tools: format json"
+        },{
+            "command": "json.minify",
+            "title": "Tools: minify json"
+        }]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "eslint": "^3.6.0",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
