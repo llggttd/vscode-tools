@@ -2,7 +2,7 @@
     "name": "tools",
     "displayName": "Tools",
     "description": "a useful collection of tools.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "icon": "icon.png",
     "publisher": "0z0ne",
     "engines": {
