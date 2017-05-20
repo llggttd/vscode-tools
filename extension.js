@@ -1,4 +1,5 @@
 const vscode = require('vscode')
+const moment = require('moment')
 
 var LINE_SEPERATOR = /\n|\r\n/
 var JSON_SPACE = 4
@@ -7,7 +8,7 @@ var JSON_SPACE = 4
  * 
  * @param {TextEditor} editor 
  */
-function getRaw(editor) {
+function getCurrentSelection(editor) {
     let raw, range
     if (!editor.selection.isEmpty) {
         range = editor.selection
@@ -36,8 +37,8 @@ function parseJson(raw) {
 
 function activate(context) {
     console.log('激活扩展 <tools>');
-    let disposable = vscode.commands.registerTextEditorCommand('json.format', function (editor) {
-        let [raw, range] = getRaw(editor)
+    let formatJson = vscode.commands.registerTextEditorCommand('json.format', function (editor) {
+        let [raw, range] = getCurrentSelection(editor)
         let json = parseJson(raw)
         if (!json) {
             vscode.window.showErrorMessage('不合法的JSON字符串')
@@ -47,10 +48,10 @@ function activate(context) {
             builder.replace(range, JSON.stringify(json, null, JSON_SPACE))
         })
     })
-    context.subscriptions.push(disposable)
+    context.subscriptions.push(formatJson)
 
-    disposable = vscode.commands.registerTextEditorCommand('json.minify', function (editor) {
-        let [raw, range] = getRaw(editor)
+    let minifyJson = vscode.commands.registerTextEditorCommand('json.minify', function (editor) {
+        let [raw, range] = getCurrentSelection(editor)
         let json = parseJson(raw)
         if (!json) {
             vscode.window.showErrorMessage('不合法的JSON字符串')
@@ -60,7 +61,16 @@ function activate(context) {
             builder.replace(range, JSON.stringify(json))
         })
     })
-    context.subscriptions.push(disposable);
+    context.subscriptions.push(minifyJson);
+
+    let currentTime = vscode.commands.registerTextEditorCommand('time.current', function (editor) {
+        let date = moment().format()
+        editor.selection.start
+        editor.edit(function (builder) {
+            builder.insert(editor.selection.start, date)
+        })
+    })
+    context.subscriptions.push(currentTime);
 }
 exports.activate = activate;
 
