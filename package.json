@@ -2,7 +2,7 @@
   "name": "tools",
   "displayName": "Tools",
   "description": "a useful collection of tools.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "icon": "icon.png",
   "publisher": "0z0ne",
   "engines": {
@@ -14,7 +14,8 @@
   "activationEvents": [
     "onCommand:json.format",
     "onCommand:json.minify",
-    "onCommand:time.current"
+    "onCommand:date.currentDate",
+    "onCommand:date.currentTime"
   ],
   "main": "./extension",
   "contributes": {
@@ -28,7 +29,11 @@
         "title": "Tools: minify json"
       },
       {
-        "command": "time.current",
+        "command": "date.currentDate",
+        "title": "Tools: current data"
+      },
+      {
+        "command": "date.currentTime",
         "title": "Tools: current time"
       }
     ]

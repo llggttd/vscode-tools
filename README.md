@@ -4,11 +4,14 @@
 
 ## Features
 
-- 格式化JSON字符串
+- json.format 格式化JSON字符串
 
-- 压缩JSON字符串
+- json.minify 压缩JSON字符串
 
-- 在光标处插入当前时间
+- date.currentDate 在光标处插入当前时间, 如：2017-05-22 14:24:06
+
+- date.currentTime 在光标处插入当前时间，如：2017-05-22T14:24:17+08:00
+
 
 ## Requirements
 
@@ -18,4 +21,5 @@
 
 ## 打包
 
+> npm install -g vsce
 > vsce package

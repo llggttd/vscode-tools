@@ -63,14 +63,19 @@ function activate(context) {
     })
     context.subscriptions.push(minifyJson);
 
-    let currentTime = vscode.commands.registerTextEditorCommand('time.current', function (editor) {
-        let date = moment().format()
-        editor.selection.start
+    let currentTime = vscode.commands.registerTextEditorCommand('date.currentTime', function (editor) {
         editor.edit(function (builder) {
-            builder.insert(editor.selection.start, date)
+            builder.insert(editor.selection.start, moment().format())
         })
     })
     context.subscriptions.push(currentTime);
+
+    let currentDate = vscode.commands.registerTextEditorCommand('date.currentDate', function (editor) {
+        editor.edit(function (builder) {
+            builder.insert(editor.selection.start, moment().format('YYYY-MM-DD HH:mm:ss'))
+        })
+    })
+    context.subscriptions.push(currentDate);
 }
 exports.activate = activate;
 
