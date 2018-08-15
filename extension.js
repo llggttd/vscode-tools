@@ -65,14 +65,14 @@ function activate(context) {
 
     let currentTime = vscode.commands.registerTextEditorCommand('date.currentTime', function (editor) {
         editor.edit(function (builder) {
-            builder.insert(editor.selection.start, moment().format())
+            builder.insert(editor.selection.start, moment().format('HH:mm:ss'))
         })
     })
     context.subscriptions.push(currentTime);
 
     let currentDate = vscode.commands.registerTextEditorCommand('date.currentDate', function (editor) {
         editor.edit(function (builder) {
-            builder.insert(editor.selection.start, moment().format('YYYY-MM-DD HH:mm:ss'))
+            builder.insert(editor.selection.start, moment().format('YYYY-MM-DD'))
         })
     })
     context.subscriptions.push(currentDate);

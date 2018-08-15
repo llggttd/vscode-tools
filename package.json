@@ -2,7 +2,7 @@
   "name": "tools",
   "displayName": "Tools",
   "description": "a useful collection of tools.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "icon": "icon.png",
   "publisher": "0z0ne",
   "engines": {
@@ -44,11 +44,11 @@
   },
   "devDependencies": {
     "@types/mocha": "^2.2.32",
-    "@types/node": "^6.0.85",
+    "@types/node": "^6.0.116",
     "eslint": "^3.6.0",
     "mocha": "^2.3.3",
-    "typescript": "^2.4.2",
-    "vscode": "^1.1.4"
+    "typescript": "^2.9.2",
+    "vscode": "^1.1.18"
   },
   "dependencies": {
     "moment": "^2.18.1"
