@@ -1,0 +1,6 @@
+{
+    "tools.format.json": "Tools: format json string",
+    "tools.minify.json": "Tools: minify json string",
+    "tools.current.date": "Tools: insert current date",
+    "tools.current.time": "Tools: insert current time"
+}

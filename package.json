@@ -2,7 +2,7 @@
   "name": "tools",
   "displayName": "Tools",
   "description": "a useful collection of tools.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "icon": "icon.png",
   "publisher": "0z0ne",
   "engines": {
@@ -22,19 +22,19 @@
     "commands": [
       {
         "command": "json.format",
-        "title": "Tools: format json"
+        "title": "%tools.format.json%"
       },
       {
         "command": "json.minify",
-        "title": "Tools: minify json"
+        "title": "%tools.minify.json%"
       },
       {
         "command": "date.currentDate",
-        "title": "Tools: current data"
+        "title": "%tools.current.date%"
       },
       {
         "command": "date.currentTime",
-        "title": "Tools: current time"
+        "title": "%tools.current.time%"
       }
     ]
   },
@@ -48,7 +48,7 @@
     "eslint": "^3.6.0",
     "mocha": "^2.3.3",
     "typescript": "^2.9.2",
-    "vscode": "^1.1.18"
+    "vscode": "^1.1.24"
   },
   "dependencies": {
     "moment": "^2.18.1"

@@ -1,0 +1,6 @@
+{
+    "tools.format.json": "Tools: 格式化JSON字符串",
+    "tools.minify.json": "Tools: 压缩JSON字符串",
+    "tools.current.date": "Tools: 插入当前日期",
+    "tools.current.time": "Tools: 插入当前时间"
+}

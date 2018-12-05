@@ -8,9 +8,9 @@
 
 - json.minify 压缩JSON字符串
 
-- date.currentDate 在光标处插入当前时间, 如：2017-05-22 14:24:06
+- date.currentDate 在光标处插入当前时间, 如：2017-05-22
 
-- date.currentTime 在光标处插入当前时间，如：2017-05-22T14:24:17+08:00
+- date.currentTime 在光标处插入当前时间，如：14:24:17
 
 
 ## Requirements
