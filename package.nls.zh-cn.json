@@ -2,5 +2,9 @@
     "tools.format.json": "Tools: 格式化JSON字符串",
     "tools.minify.json": "Tools: 压缩JSON字符串",
     "tools.current.date": "Tools: 插入当前日期",
-    "tools.current.time": "Tools: 插入当前时间"
+    "tools.current.time": "Tools: 插入当前时间",
+    "tools.url.encode": "Tools: URL编码",
+    "tools.url.decode": "Tools: URL解码",
+    "tools.url.components.encode": "Tools: URL组件编码",
+    "tools.url.components.decode": "Tools: URL组件解码"
 }

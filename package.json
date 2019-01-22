@@ -2,7 +2,7 @@
   "name": "tools",
   "displayName": "Tools",
   "description": "a useful collection of tools.",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "icon": "icon.png",
   "publisher": "0z0ne",
   "engines": {
@@ -15,7 +15,11 @@
     "onCommand:json.format",
     "onCommand:json.minify",
     "onCommand:date.currentDate",
-    "onCommand:date.currentTime"
+    "onCommand:date.currentTime",
+    "onCommand:url.encodeURI",
+    "onCommand:url.decodeURI",
+    "onCommand:url.encodeURIComponents",
+    "onCommand:url.decodeURIComponents"
   ],
   "main": "./extension",
   "contributes": {
@@ -35,6 +39,22 @@
       {
         "command": "date.currentTime",
         "title": "%tools.current.time%"
+      },
+      {
+        "command": "url.encodeURI",
+        "title": "%tools.url.encode%"
+      },
+      {
+        "command": "url.decodeURI",
+        "title": "%tools.url.decode%"
+      },
+      {
+        "command": "url.encodeURIComponents",
+        "title": "%tools.url.components.encode%"
+      },
+      {
+        "command": "url.decodeURIComponents",
+        "title": "%tools.url.components.decode%"
       }
     ]
   },
@@ -43,14 +63,14 @@
     "test": "node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
-    "@types/mocha": "^2.2.32",
-    "@types/node": "^6.0.116",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^6.14.2",
     "eslint": "^3.6.0",
     "mocha": "^2.3.3",
     "typescript": "^2.9.2",
-    "vscode": "^1.1.24"
+    "vscode": "^1.1.27"
   },
   "dependencies": {
-    "moment": "^2.18.1"
+    "moment": "^2.24.0"
   }
 }

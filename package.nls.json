@@ -2,5 +2,9 @@
     "tools.format.json": "Tools: format json string",
     "tools.minify.json": "Tools: minify json string",
     "tools.current.date": "Tools: insert current date",
-    "tools.current.time": "Tools: insert current time"
+    "tools.current.time": "Tools: insert current time",
+    "tools.url.encode": "Tools: encode url",
+    "tools.url.decode": "Tools: decode url",
+    "tools.url.components.encode": "Tools: encode url components",
+    "tools.url.components.decode": "Tools: decode url components"
 }
