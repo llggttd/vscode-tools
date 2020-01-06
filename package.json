@@ -1,12 +1,12 @@
 {
-  "name": "tools",
-  "displayName": "Tools",
-  "description": "a useful collection of tools.",
-  "version": "0.1.0",
-  "icon": "icon.png",
+  "name": "power-tool",
+  "displayName": "PowerTool",
+	"description": "a collection of power tools.",
   "publisher": "0z0ne",
+  "icon": "icon.png",
+  "version": "0.2.0",
   "engines": {
-    "vscode": "^1.11.0"
+    "vscode": "^1.41.0"
   },
   "categories": [
     "Other"
@@ -21,7 +21,7 @@
     "onCommand:url.encodeURIComponents",
     "onCommand:url.decodeURIComponents"
   ],
-  "main": "./extension",
+  "main": "./extension.js",
   "contributes": {
     "commands": [
       {
@@ -59,16 +59,16 @@
     ]
   },
   "scripts": {
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
+    "package": "vsce package"
   },
   "devDependencies": {
-    "@types/mocha": "^2.2.48",
-    "@types/node": "^6.14.2",
-    "eslint": "^3.6.0",
-    "mocha": "^2.3.3",
-    "typescript": "^2.9.2",
-    "vscode": "^1.1.27"
+    "@types/glob": "^7.1.1",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.41.0",
+    "eslint": "^6.6.0",
+    "glob": "^7.1.5",
+    "typescript": "^3.6.4",
+    "vscode-test": "^1.2.2"
   },
   "dependencies": {
     "moment": "^2.24.0"
