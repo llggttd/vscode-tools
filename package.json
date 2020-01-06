@@ -5,6 +5,10 @@
   "publisher": "0z0ne",
   "icon": "icon.png",
   "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/llggttd/vscode-tools.git"
+  },
   "engines": {
     "vscode": "^1.41.0"
   },
