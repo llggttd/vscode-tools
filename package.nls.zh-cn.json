@@ -6,5 +6,6 @@
     "tools.url.encode": "Tools: URL编码",
     "tools.url.decode": "Tools: URL解码",
     "tools.url.components.encode": "Tools: URL组件编码",
-    "tools.url.components.decode": "Tools: URL组件解码"
+    "tools.url.components.decode": "Tools: URL组件解码",
+    "tools.util.uniqueId": "Tools: 唯一ID(snowflake)"
 }

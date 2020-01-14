@@ -21,7 +21,10 @@
 - url.encodeURIComponents URL组件编码
 
 - url.decodeURIComponents URL组件解码
-      
+ 
+- util.uniqueId 使用雪花算法生成分布式ID
+
+
 ## Requirements
 
 - moment

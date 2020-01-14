@@ -1,5 +1,6 @@
 const vscode = require('vscode')
 const moment = require('moment')
+const snowFlake = require('./src/snow-flake')
 
 var LINE_SEPERATOR = /\n|\r\n/
 var JSON_SPACE = 4
@@ -126,6 +127,12 @@ const urlComponentsDecode = vscode.commands.registerTextEditorCommand('url.decod
 	})
 })
 
+const uniqId = vscode.commands.registerTextEditorCommand('util.uniqueId', function (editor) {
+	editor.edit(function (builder) {
+		builder.insert(editor.selection.start, snowFlake.nextId().toString())
+	})
+})
+
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -139,6 +146,7 @@ function activate(context) {
 	context.subscriptions.push(urlDecode)
 	context.subscriptions.push(urlComponentsEncode)
 	context.subscriptions.push(urlComponentsDecode)
+	context.subscriptions.push(uniqId)
 }
 
 exports.activate = activate
