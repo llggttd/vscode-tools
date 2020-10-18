@@ -1,7 +1,7 @@
 {
   "name": "power-tool",
   "displayName": "PowerTool",
-	"description": "a collection of power tools.",
+  "description": "a collection of power tools.",
   "publisher": "0z0ne",
   "icon": "icon.png",
   "version": "0.2.1",
