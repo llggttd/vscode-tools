@@ -7,5 +7,7 @@
     "tools.url.decode": "Tools: decode url",
     "tools.url.components.encode": "Tools: encode url components",
     "tools.url.components.decode": "Tools: decode url components",
-    "tools.util.uniqueId": "Tools: generate uniqure id"
+    "tools.util.uniqueId": "Tools: generate uniqure id",
+    "tools.util.base64Encode": "Tools: encode with base64",
+    "tools.util.base64Decode": "Tools: decode with base64"
 }

@@ -23,6 +23,10 @@
 - url.decodeURIComponents URL组件解码
  
 - util.uniqueId 使用雪花算法生成分布式ID
+ 
+- util.base64Encode base64编码
+
+- util.base64Decode base64解码
 
 
 ## Requirements

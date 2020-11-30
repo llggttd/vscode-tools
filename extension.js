@@ -3,7 +3,7 @@ const moment = require('moment')
 const snowFlake = require('./src/snow-flake')
 
 var LINE_SEPERATOR = /\n|\r\n/
-var JSON_SPACE = 4
+var JSON_SPACE = 2
 
 /**
  * 获取当前操作区域和文本
@@ -127,9 +127,32 @@ const urlComponentsDecode = vscode.commands.registerTextEditorCommand('url.decod
 	})
 })
 
+/**
+ * uniqueid
+ */
 const uniqId = vscode.commands.registerTextEditorCommand('util.uniqueId', function (editor) {
 	editor.edit(function (builder) {
 		builder.insert(editor.selection.start, snowFlake.nextId().toString())
+	})
+})
+
+/**
+ * base64编码
+ */
+const base64Encode = vscode.commands.registerTextEditorCommand('util.base64Encode', function (editor) {
+	let { raw, range } = getCurrentSelection(editor)
+	editor.edit(function (builder) {
+		builder.replace(range, Buffer.from(raw).toString('base64'))
+	})
+})
+
+/**
+ * base64解码
+ */
+const base64Decode = vscode.commands.registerTextEditorCommand('util.base64Decode', function (editor) {
+	let { raw, range } = getCurrentSelection(editor)
+	editor.edit(function (builder) {
+		builder.replace(range, Buffer.from(raw, 'base64').toString())
 	})
 })
 
@@ -147,6 +170,8 @@ function activate(context) {
 	context.subscriptions.push(urlComponentsEncode)
 	context.subscriptions.push(urlComponentsDecode)
 	context.subscriptions.push(uniqId)
+	context.subscriptions.push(base64Encode)
+	context.subscriptions.push(base64Decode)
 }
 
 exports.activate = activate

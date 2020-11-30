@@ -4,7 +4,7 @@
 	"description": "a collection of power tools.",
   "publisher": "0z0ne",
   "icon": "icon.png",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/llggttd/vscode-tools.git"
@@ -24,7 +24,9 @@
     "onCommand:url.decodeURI",
     "onCommand:url.encodeURIComponents",
     "onCommand:url.decodeURIComponents",
-    "onCommand:util.uniqueId"
+    "onCommand:util.uniqueId",
+    "onCommand:util.base64Encode",
+    "onCommand:util.base64Decode"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -64,6 +66,14 @@
       {
         "command": "util.uniqueId",
         "title": "%tools.util.uniqueId%"
+      },
+      {
+        "command": "util.base64Encode",
+        "title": "%tools.util.base64Encode%"
+      },
+      {
+        "command": "util.base64Decode",
+        "title": "%tools.util.base64Decode%"
       }
     ]
   },

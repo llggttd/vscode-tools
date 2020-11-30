@@ -7,5 +7,7 @@
     "tools.url.decode": "Tools: URL解码",
     "tools.url.components.encode": "Tools: URL组件编码",
     "tools.url.components.decode": "Tools: URL组件解码",
-    "tools.util.uniqueId": "Tools: 唯一ID(snowflake)"
+		"tools.util.uniqueId": "Tools: 唯一ID(snowflake)",
+		"tools.util.base64Encode": "Tools: base64编码",
+    "tools.util.base64Decode": "Tools: base64解码"
 }
