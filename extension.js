@@ -128,6 +128,26 @@ const urlComponentsDecode = vscode.commands.registerTextEditorCommand('url.decod
 })
 
 /**
+ * decodeURIComponent
+ */
+const urlEscape = vscode.commands.registerTextEditorCommand('url.escape', function (editor) {
+	let { raw, range } = getCurrentSelection(editor)
+	editor.edit(function (builder) {
+		builder.replace(range, escape(raw))
+	})
+})
+
+/**
+ * decodeURIComponent
+ */
+const urlUnescape = vscode.commands.registerTextEditorCommand('url.unescape', function (editor) {
+	let { raw, range } = getCurrentSelection(editor)
+	editor.edit(function (builder) {
+		builder.replace(range, unescape(raw))
+	})
+})
+
+/**
  * uniqueid
  */
 const uniqId = vscode.commands.registerTextEditorCommand('util.uniqueId', function (editor) {
@@ -172,16 +192,14 @@ function activate(context) {
 	context.subscriptions.push(uniqId)
 	context.subscriptions.push(base64Encode)
 	context.subscriptions.push(base64Decode)
+	context.subscriptions.push(urlEscape)
+	context.subscriptions.push(urlUnescape)
 }
-
-exports.activate = activate
 
 // this method is called when your extension is deactivated
 function deactivate() {
 	console.log('关闭扩展')
 }
-
-exports.deactivate = deactivate
 
 module.exports = {
 	activate,
