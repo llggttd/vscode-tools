@@ -28,6 +28,9 @@
 
 - util.base64Decode base64解码
 
+- util.escape escape
+
+- util.unescape unescape
 
 ## Requirements
 

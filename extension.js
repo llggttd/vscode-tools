@@ -128,7 +128,7 @@ const urlComponentsDecode = vscode.commands.registerTextEditorCommand('url.decod
 })
 
 /**
- * decodeURIComponent
+ * urlEscape
  */
 const urlEscape = vscode.commands.registerTextEditorCommand('url.escape', function (editor) {
 	let { raw, range } = getCurrentSelection(editor)
@@ -138,7 +138,7 @@ const urlEscape = vscode.commands.registerTextEditorCommand('url.escape', functi
 })
 
 /**
- * decodeURIComponent
+ * urlUnescape
  */
 const urlUnescape = vscode.commands.registerTextEditorCommand('url.unescape', function (editor) {
 	let { raw, range } = getCurrentSelection(editor)

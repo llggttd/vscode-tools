@@ -26,7 +26,9 @@
     "onCommand:url.decodeURIComponents",
     "onCommand:util.uniqueId",
     "onCommand:util.base64Encode",
-    "onCommand:util.base64Decode"
+    "onCommand:util.base64Decode",
+    "onCommand:url.escape",
+    "onCommand:url.unescape"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -76,12 +78,12 @@
         "title": "%tools.util.base64Decode%"
       },
       {
-        "command": "util.escape",
-        "title": "%tools.util.escape%"
+        "command": "url.escape",
+        "title": "%tools.url.escape%"
       },
       {
-        "command": "util.unescape",
-        "title": "%tools.util.unescape%"
+        "command": "url.unescape",
+        "title": "%tools.url.unescape%"
       }
     ]
   },
