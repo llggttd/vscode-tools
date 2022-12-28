@@ -1,5 +1,5 @@
 const vscode = require('vscode')
-const moment = require('moment')
+const dayjs = require('dayjs')
 const snowFlake = require('./src/snow-flake')
 
 var LINE_SEPERATOR = /\n|\r\n/
@@ -74,7 +74,8 @@ const minifyJson = vscode.commands.registerTextEditorCommand('json.minify', func
  */
 const currentTime = vscode.commands.registerTextEditorCommand('date.currentTime', function (editor) {
 	editor.edit(function (builder) {
-		builder.insert(editor.selection.start, moment().format(moment.HTML5_FMT.TIME_SECONDS))
+		dayjs().format('HH:mm:ss')
+		builder.insert(editor.selection.start, dayjs().format('HH:mm:ss'))
 	})
 })
 
@@ -83,7 +84,7 @@ const currentTime = vscode.commands.registerTextEditorCommand('date.currentTime'
  */
 const currentDate = vscode.commands.registerTextEditorCommand('date.currentDate', function (editor) {
 	editor.edit(function (builder) {
-		builder.insert(editor.selection.start, moment().format(moment.HTML5_FMT.DATE))
+		builder.insert(editor.selection.start, dayjs().format('YYYY-MM-DD'))
 	})
 })
 
